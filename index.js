@@ -6,10 +6,11 @@ const obj = [
   {name: 'Josh', age: 76, weight: 35},
   {name: 'Mark', age: 32, weight: 15},
   {name: 'Joanna', age: 98, weight: 37},
-  {name: 'Mike', age: 13, weight: 405},
+  {name: 'Mark', age: 13, weight: 405},
 ];
 
-sortByAge(obj);
+//sortByAge(obj);
+sortByName(obj);
 
 obj.forEach(obj => {
   console.log("name: ", obj.name + ', age: ', obj.age + ", weight: ", obj.weight);
@@ -21,6 +22,20 @@ function sortByAge(obj) {
       return a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1;
     } else {
       if (a.age > b.age) {
+        return 1;
+      } else {
+        return -1;
+      }
+    }
+  })
+}
+
+function sortByName(obj) {
+  obj.sort(function(a, b) {
+    if (a.name.toLowerCase() == b.name.toLowerCase()) {
+      return a.age > b.age ? 1 : -1;
+    } else {
+      if (a.name.toLowerCase() > b.name.toLowerCase()) {
         return 1;
       } else {
         return -1;
