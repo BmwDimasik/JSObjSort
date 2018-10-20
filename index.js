@@ -11,11 +11,11 @@ const obj = [
 
 //sortByAge(obj);
 //sortByName(obj);
-sortByWeight(obj);
+//sortByWeight(obj);
 
-obj.forEach(obj => {
-  console.log("name: ", obj.name + ', age: ', obj.age + ", weight: ", obj.weight);
-})
+//obj.forEach(obj => {
+//  console.log("name: ", obj.name + ', age: ', obj.age + ", weight: ", obj.weight);
+//})
 
 function sortByAge(obj) {
   obj.sort(function(a, b) {
